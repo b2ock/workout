@@ -4,6 +4,8 @@ let workoutDisplay = document.querySelector('#workout-display');
 
 let dayWorkouts
 
+let selectedWorkout
+
 // get workouts based on the day selected in workoutDropdown
 function getDayWorkouts() {
     workoutDropdown.innerHTML = "";
@@ -26,6 +28,7 @@ function getDayWorkouts() {
         option.innerHTML = workoutName;
         workoutDropdown.appendChild(option);
     }
+    displayWorkout()
 }
 
 // display workout in the workout-display div
@@ -40,15 +43,17 @@ function displayWorkout() {
         for (item of dayWorkouts) {
             if (item.name == workoutDropdown.value) {
                 workout = item;
+                selectedWorkout = workout;
                 break;
             }
         }
             workoutDisplay.innerText = 
                 `${workout.name}
-                Weight: ${workout.weight}
+                Weight: ${localStorage.getItem(workout.name) ? localStorage.getItem(workout.name) : workout.weight}
                 Sets: ${workout.sets}
                 Reps: ${workout.reps}`
     }
+    console.log(document.querySelector('#weight-selection'))
 }
 
 function displayNextWorkout(workoutName) {
@@ -59,5 +64,22 @@ function displayNextWorkout(workoutName) {
     displayWorkout();
 }
 
+function getWeightOptions() {
+    let weightDropdown = document.querySelector('#weight-selection');
+    let dif = 5;
+    for (i = 1; i<20; i++) {
+        let option = document.createElement('option');
+        option.value = i * dif;
+        option.innerText = i * dif;
+        weightDropdown.appendChild(option);
+    }
+}
+
+function setWorkoutWeight() {
+    localStorage.setItem(`${selectedWorkout.name}`, `${document.querySelector('#weight-selection').value}`);
+
+    displayWorkout();
+}
+
 getDayWorkouts();
-displayWorkout();
+getWeightOptions();
