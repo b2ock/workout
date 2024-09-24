@@ -21,9 +21,10 @@
 
     <div id="workout-display"></div>
 
-    <button onclick="displayNextWorkout(workoutDropdown.value)">Next</button>
-    <select id="weight-selection"></select>
-    <button id="set-weight" onclick="setWorkoutWeight()">Set</button>
+    <button onclick="changeWorkout(workoutDropdown.value, -1)">Previous</button>
+    <button id="remove-five" onclick="removeFivePounds()">- 5</button>
+    <button id="add-five" onclick="addFivePounds()">+ 5</button>
+    <button onclick="changeWorkout(workoutDropdown.value, 1)">Next</button>
 
     <script src="workouts.js"></script>
     <script src="workoutActions.js"></script>

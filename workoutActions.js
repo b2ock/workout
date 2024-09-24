@@ -1,12 +1,9 @@
-let daySelector = document.querySelector('#day-selector');
-let workoutDropdown = document.querySelector('#workout-dropdown');
-let workoutDisplay = document.querySelector('#workout-display');
-
 let dayWorkouts
-
 let selectedWorkout
 
 // get workouts based on the day selected in workoutDropdown
+let workoutDropdown = document.querySelector('#workout-dropdown');
+let daySelector = document.querySelector('#day-selector');
 function getDayWorkouts() {
     workoutDropdown.innerHTML = "";
 
@@ -32,13 +29,16 @@ function getDayWorkouts() {
 }
 
 // display workout in the workout-display div
+let workoutDisplay = document.querySelector('#workout-display');
 function displayWorkout() {
     // add a warm up option and display the generic warm up message
     if (workoutDropdown.value == 'warm-up') {
         workoutDisplay.innerText = 
-                `5-10 min Cardio`
+                `5-10 min Cardio`;
+        hideWorkoutOptions();
     }
     else {
+        showWorkoutOptions();
         let workout
         for (item of dayWorkouts) {
             if (item.name == workoutDropdown.value) {
@@ -55,30 +55,53 @@ function displayWorkout() {
     }
 }
 
-function displayNextWorkout(workoutName) {
-    if (workoutDropdown.selectedIndex == workoutDropdown.length - 1) {
-        workoutDropdown.selectedIndex = 0;
+//  increment the workout in the workoutDropdown. indexChange determins if you move forwards or backwards using 1 and -1
+function changeWorkout(workoutName, indexChange) {
+    if (workoutDropdown.selectedIndex == 0 && indexChange == -1) {
+        workoutDropdown.selectedIndex = workoutDropdown.length - 1;
+        indexChange = 0;
     }
-    workoutDropdown.selectedIndex += 1;
+    if (workoutDropdown.selectedIndex == workoutDropdown.length - 1 && indexChange == 1) {
+            workoutDropdown.selectedIndex = 0;
+            indexChange = 0;
+        }
+        workoutDropdown.selectedIndex += indexChange;
+        displayWorkout();
+}
+
+// add five pounds to the current weight in local storage
+function addFivePounds() {
+    let weight = parseInt(localStorage.getItem(selectedWorkout.name));
+    if (isNaN(weight)) {
+        weight = 0;
+    } 
+    localStorage.setItem(selectedWorkout.name, weight + 5);
     displayWorkout();
 }
 
-function getWeightOptions() {
-    let weightDropdown = document.querySelector('#weight-selection');
-    let dif = 5;
-    for (i = 1; i<20; i++) {
-        let option = document.createElement('option');
-        option.value = i * dif;
-        option.innerText = i * dif;
-        weightDropdown.appendChild(option);
+// remove five pounds from the workouts current weight in local storage
+function removeFivePounds() {
+    let weight = parseInt(localStorage.getItem(selectedWorkout.name));
+    if (weight < 0 || isNaN(weight)) {
+        console.log("Can't go below 0");
+        // should we be able to go below zero for removing weight?
+        // add something that alerts the user
     }
+    localStorage.setItem(selectedWorkout.name, weight - 5);
+    displayWorkout();
 }
 
-function setWorkoutWeight() {
-    localStorage.setItem(`${selectedWorkout.name}`, `${document.querySelector('#weight-selection').value}`);
+// this is for hiding functionality that isn't importatnt to a user when not on a workout
+// like when they are on a warm up
+function hideWorkoutOptions() {
+    document.querySelector('#add-five').setAttribute('disabled', 'true');
+    document.querySelector('#remove-five').setAttribute('disabled', 'true');
+}
 
-    displayWorkout();
+// enable options for functionality that is important for workouts
+function showWorkoutOptions() {
+    document.querySelector('#add-five').removeAttribute('disabled');
+    document.querySelector('#remove-five').removeAttribute('disabled');
 }
 
 getDayWorkouts();
-getWeightOptions();
