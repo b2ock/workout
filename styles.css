@@ -107,5 +107,5 @@ button {
 #workout-dropdown {
     width: auto;
     text-align: center;
-    padding-left: 50%;
+    text-align-last: center;
 }
