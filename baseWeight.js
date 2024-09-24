@@ -25,7 +25,9 @@ const workoutBaseWeights = {
   };
 
 for (item in workoutBaseWeights) {
-    localStorage.setItem(item, workoutBaseWeights[item])
+    if (localStorage.getItem(item)){
+        localStorage.setItem(item, workoutBaseWeights[item])
+    }
 }
 
 console.log("Base Weights set successfully")
