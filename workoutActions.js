@@ -33,8 +33,10 @@ let workoutDisplay = document.querySelector('#workout-display');
 function displayWorkout() {
     // add a warm up option and display the generic warm up message
     if (workoutDropdown.value == 'warm-up') {
-        workoutDisplay.innerText = 
-                `5-10 min Cardio`;
+        workoutDisplay.innerHTML = 
+                `<div id="workout-attributes-container">
+                <div class="workout-attribute">5-10 min Cardio</div>
+                </div>`;
         hideWorkoutOptions();
     }
     else {
@@ -47,11 +49,12 @@ function displayWorkout() {
                 break;
             }
         }
-            workoutDisplay.innerText = 
-                `${workout.name}
-                Weight: ${localStorage.getItem(workout.name) ? localStorage.getItem(workout.name) : workout.weight}
-                Sets: ${workout.sets}
-                Reps: ${workout.reps}`
+            workoutDisplay.innerHTML = 
+                `<div id="workout-attributes-container">
+                <div class="workout-attribute">Weight: ${localStorage.getItem(workout.name) ? localStorage.getItem(workout.name) : workout.weight}</div>
+                <div class="workout-attribute">Sets: ${workout.sets}</div>
+                <div class="workout-attribute">Reps: ${workout.reps}</div>
+                </div>`           
     }
 }
 

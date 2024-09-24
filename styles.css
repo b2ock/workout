@@ -5,3 +5,62 @@
 #day-selector {
     width: 200px;
 }
+
+body {
+    margin: 0px;
+}
+
+#main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(93, 93, 249), rgb(164, 116, 251));
+    align-items: center;
+    justify-content: center;
+}
+
+#workout-dropdown, #day-selector{
+    width: 350px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(159, 159, 250);
+    text-align: center;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#workout-attributes-container {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    height: 200px;
+}
+
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#button-container {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    font-size: 20px;
+    width: 40%;
+    margin: 10px;
+    height: 80px;
+    border-radius: 50px;
+    border: none;
+    font-family: "Permanent Marker";
+    background-color: rgb(159, 159, 250);
+    color: white;
+}

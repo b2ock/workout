@@ -5,26 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
-    <select id="day-selector" onchange="getDayWorkouts()">
-        <option value="monday">Monday</option>
-        <option value="tuesday">Tuesday</option>
-        <option value="wednesday">Wednesday</option>
-        <option value="thursday">Thursday</option>
-        <option value="friday">Friday</option>
-        <option value="saturday">Saturday</option>
-        <option value="sunday">Sunday</option>
-    </select>
+    <div id="main-container">
+        <select id="day-selector" class="permanent-marker-regular" onchange="getDayWorkouts()">
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+        </select>
 
-    <select id="workout-dropdown" onchange="displayWorkout()"></select>
+        <div id="workout-info-container" class="permanent-marker-regular">
+            <select id="workout-dropdown" class="permanent-marker-regular" onchange="displayWorkout()"></select>
 
-    <div id="workout-display"></div>
+            <div id="workout-display"></div>
+        </div>
 
-    <button onclick="changeWorkout(workoutDropdown.value, -1)">Previous</button>
-    <button id="remove-five" onclick="removeFivePounds()">- 5</button>
-    <button id="add-five" onclick="addFivePounds()">+ 5</button>
-    <button onclick="changeWorkout(workoutDropdown.value, 1)">Next</button>
+        <div id="button-container" class="permanent-marker-regular">
+            <button id="remove-five" onclick="removeFivePounds()">- 5</button>
+            <button id="add-five" onclick="addFivePounds()">+ 5</button>
+            <button onclick="changeWorkout(workoutDropdown.value, -1)">Previous</button>
+            <button onclick="changeWorkout(workoutDropdown.value, 1)">Next</button>
+        </div>
+    </div>
 
     <script src="workouts.js"></script>
     <script src="workoutActions.js"></script>
