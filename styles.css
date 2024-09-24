@@ -1,5 +1,5 @@
-#workout-dropdown {
-    width: 200px;
+:root {
+    --secondary-color: #252845;
 }
 
 #day-selector {
@@ -18,26 +18,63 @@ body {
     flex-direction: column;
     background: linear-gradient(rgb(93, 93, 249), rgb(164, 116, 251));
     align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+#workout-info-container {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-#workout-dropdown, #day-selector{
-    width: 350px;
+#workout-dropdown, #day-selector {
     font-size: 20px;
     border: none;
-    background-color: rgb(159, 159, 250);
+    background-color: rgb(0, 0, 0, 0);
     text-align: center;
     color: white;
     height: 40px;
-    border-radius: 10px;
-    margin: 10px;
+    -webkit-appearance: none;
+    width: auto;
+}
+
+#day-selector {
+    width: auto;
+    background-color: rgb(0, 0, 0, 0);
+    -webkit-appearance: none;
+    font-size: 50px;
+    height: auto;
 }
 
 #workout-attributes-container {
     text-align: center;
+    width: 300px;
+    display: flex;
     color: white;
-    font-size: 20px;
-    height: 200px;
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workout-attribute {
+    background-color: var(--secondary-color);
+    border-radius: 100px;
+    width: 40%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workout-attribute:nth-child(1) {
+    width: 100%;
+    background-color: rgba(168, 182, 236, 0.7);
+    font-size: 30px;
+    height: 50px;
+    margin: 10px;
 }
 
 .permanent-marker-regular {
@@ -64,4 +101,8 @@ button {
     font-family: "Permanent Marker";
     background-color: rgb(159, 159, 250);
     color: white;
+}
+
+#workout-dropdown {
+    width: auto;
 }
