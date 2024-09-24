@@ -53,7 +53,6 @@ function displayWorkout() {
                 Sets: ${workout.sets}
                 Reps: ${workout.reps}`
     }
-    console.log(document.querySelector('#weight-selection'))
 }
 
 function displayNextWorkout(workoutName) {
