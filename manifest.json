@@ -6,9 +6,11 @@
     "background_color": "#FFFFFF",
     "theme_color": "#FFFFFF",
     "orientation": "portrait-primary",
-    "iconrs" : [
+    "icons" : [
         {
-
+            "src": "/dumbbell.png",
+            "type": "image/png",
+            "sizes": "512x512"
         }
     ]
 }
