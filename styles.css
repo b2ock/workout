@@ -19,5 +19,5 @@ body {
 #day-selector {
     flex-basis: 100%;
     -webkit-appearance: none;
-    background-color: none;
+    ;
 }
