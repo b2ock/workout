@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#a474fb",
     "theme_color": "#5d5df9",
-    "orientation": "portrait-primary",
+    "orientation": "portrait",
     "icons" : [
         {
             "src": "/workout/images/dumbbell72.png",
