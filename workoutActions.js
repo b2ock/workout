@@ -106,5 +106,3 @@ function showWorkoutOptions() {
     document.querySelector('#add-five').removeAttribute('disabled');
     document.querySelector('#remove-five').removeAttribute('disabled');
 }
-
-getDayWorkouts();
