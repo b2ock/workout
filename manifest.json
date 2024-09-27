@@ -1,6 +1,6 @@
 {
-    "name": "Workout",
-    "short_name": "Workout",
+    "name": "get bricked",
+    "short_name": "get bricked",
     "start_url": "/workout/index.html",
     "display": "standalone",
     "background_color": "#a474fb",
@@ -8,29 +8,44 @@
     "orientation": "portrait",
     "icons" : [
         {
-            "src": "/workout/images/dumbbell72.png",
+            "src": "/workout/images/app_image_1080.png",
             "type": "image/png",
-            "sizes": "72x72"
+            "sizes": "1080x1080"
         },
         {
-            "src": "/workout/images/dumbbell96.png",
+            "src": "/workout/images/app_image_96",
             "type": "image/png",
             "sizes": "96x96"
         },
         {
-            "src": "/workout/images/dumbbell128.png",
+            "src": "/workout/images/app_image_128.png",
             "type": "image/png",
             "sizes": "128x128"
         },
         {
-            "src": "/workout/images/dumbbell144.png",
+            "src": "/workout/images/app_image_144.png",
             "type": "image/png",
             "sizes": "144x144"
         },
         {
-            "src": "/workout/images/dumbbell152.png",
+            "src": "/workout/images/app_image_152.png",
             "type": "image/png",
             "sizes": "152x152"
+        },
+        {
+            "src": "/workout/images/app_image_72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/workout/images/app_image_384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "/workout/images/app_image_512.png",
+            "type": "image/png",
+            "sizes": "512x512"
         }
     ]
 }

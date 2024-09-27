@@ -97,12 +97,24 @@ function removeWeight(weight) {
 // this is for hiding functionality that isn't importatnt to a user when not on a workout
 // like when they are on a warm up
 function hideWorkoutOptions() {
-    document.querySelector('#add-five').setAttribute('disabled', 'true');
-    document.querySelector('#remove-five').setAttribute('disabled', 'true');
+    let workoutOptions = document.querySelectorAll('.workout-option');
+    try {
+        for (option of workoutOptions) {
+            option.setAttribute('disabled', 'true');
+        }
+    } catch {
+        console.error("Disabling workout-options failed");
+    }
 }
 
 // enable options for functionality that is important for workouts
 function showWorkoutOptions() {
-    document.querySelector('#add-five').removeAttribute('disabled');
-    document.querySelector('#remove-five').removeAttribute('disabled');
+    let workoutOptions = document.querySelectorAll('.workout-option');
+    try {
+        for (option of workoutOptions) {
+            option.removeAttribute('disabled');
+        }
+    } catch {
+        console.error("Enabling workout-options failed");
+    }
 }
