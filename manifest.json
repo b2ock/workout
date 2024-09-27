@@ -8,9 +8,29 @@
     "orientation": "portrait-primary",
     "icons" : [
         {
-            "src": "/dumbbell.png",
+            "src": "/images/dumbbell72.png",
             "type": "image/png",
-            "sizes": "512x512"
+            "sizes": "72x72"
+        },
+        {
+            "src": "/images/dumbbell96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/images/dumbbell128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/images/dumbbell144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/images/dumbbell152.png",
+            "type": "image/png",
+            "sizes": "152x152"
         }
     ]
 }
