@@ -94,6 +94,28 @@ function removeFivePounds() {
     displayWorkout();
 }
 
+// add weight to the workout
+function addWeight(weight) {
+    let currentWeight = parseInt(localStorage.getItem(selectedWorkout.name));
+    if (isNaN(currentWeight)) {
+        currentWeight = 0;
+    } 
+    
+    localStorage.setItem(selectedWorkout.name, currentWeight + weight);
+    displayWorkout();
+}
+
+// remove weight from the workout
+function removeWeight(weight) {
+    let currentWeight = parseInt(localStorage.getItem(selectedWorkout.name));
+    if (isNaN(currentWeight)) {
+        currentWeight = 0;
+    } 
+    
+    localStorage.setItem(selectedWorkout.name, currentWeight - weight);
+    displayWorkout();
+}
+
 // this is for hiding functionality that isn't importatnt to a user when not on a workout
 // like when they are on a warm up
 function hideWorkoutOptions() {
