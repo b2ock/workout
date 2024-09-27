@@ -8,27 +8,27 @@
     "orientation": "portrait-primary",
     "icons" : [
         {
-            "src": "/images/dumbbell72.png",
+            "src": "/workout/images/dumbbell72.png",
             "type": "image/png",
             "sizes": "72x72"
         },
         {
-            "src": "/images/dumbbell96.png",
+            "src": "/workout/images/dumbbell96.png",
             "type": "image/png",
             "sizes": "96x96"
         },
         {
-            "src": "/images/dumbbell128.png",
+            "src": "/workout/images/dumbbell128.png",
             "type": "image/png",
             "sizes": "128x128"
         },
         {
-            "src": "/images/dumbbell144.png",
+            "src": "/workout/images/dumbbell144.png",
             "type": "image/png",
             "sizes": "144x144"
         },
         {
-            "src": "/images/dumbbell152.png",
+            "src": "/workout/images/dumbbell152.png",
             "type": "image/png",
             "sizes": "152x152"
         }
