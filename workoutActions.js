@@ -72,28 +72,6 @@ function changeWorkout(workoutName, indexChange) {
         displayWorkout();
 }
 
-// add five pounds to the current weight in local storage
-function addFivePounds() {
-    let weight = parseInt(localStorage.getItem(selectedWorkout.name));
-    if (isNaN(weight)) {
-        weight = 0;
-    } 
-    localStorage.setItem(selectedWorkout.name, weight + 5);
-    displayWorkout();
-}
-
-// remove five pounds from the workouts current weight in local storage
-function removeFivePounds() {
-    let weight = parseInt(localStorage.getItem(selectedWorkout.name));
-    if (weight < 0 || isNaN(weight)) {
-        console.log("Can't go below 0");
-        // should we be able to go below zero for removing weight?
-        // add something that alerts the user
-    }
-    localStorage.setItem(selectedWorkout.name, weight - 5);
-    displayWorkout();
-}
-
 // add weight to the workout
 function addWeight(weight) {
     let currentWeight = parseInt(localStorage.getItem(selectedWorkout.name));
