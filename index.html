@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="main-container">
+    <div class="container">
         <select id="day-selector" class="permanent-marker-regular" onchange="getDayWorkouts()">
             <option value="monday">Monday</option>
             <option value="tuesday">Tuesday</option>
@@ -22,19 +22,19 @@
             <option value="sunday">Sunday</option>
         </select>
 
-        <div id="workout-info-container" class="permanent-marker-regular">
-            <select id="workout-dropdown" class="permanent-marker-regular" onchange="displayWorkout()"></select>
-
+        <div id="workout-info-container">
+            <button onclick="changeWorkout(workoutDropdown.value, -1)">Previous</button>
+            <select id="workout-dropdown" onchange="displayWorkout()"></select>
+            <button onclick="changeWorkout(workoutDropdown.value, 1)">Next</button>
             <div id="workout-display"></div>
         </div>
 
-        <div id="button-container" class="permanent-marker-regular">
+        <div id="button-container">
             <button class="workout-option" onclick="removeWeight(1)">- 1</button>
             <button class="workout-option" onclick="addWeight(1)">+ 1</button>
             <button class="workout-option" onclick="removeWeight(5)">- 5</button>
             <button class="workout-option" onclick="addWeight(5)">+ 5</button>
-            <button onclick="changeWorkout(workoutDropdown.value, -1)">Previous</button>
-            <button onclick="changeWorkout(workoutDropdown.value, 1)">Next</button>
+            
         </div>
     </div>
 
