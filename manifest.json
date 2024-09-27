@@ -3,8 +3,8 @@
     "short_name": "Workout",
     "start_url": "/workout/index.html",
     "display": "standalone",
-    "background_color": "#FFFFFF",
-    "theme_color": "#FFFFFF",
+    "background_color": "#5d5df9",
+    "theme_color": "#a474fb",
     "orientation": "portrait-primary",
     "icons" : [
         {
