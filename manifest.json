@@ -1,7 +1,7 @@
 {
     "name": "Workout",
     "short_name": "Workout",
-    "start_url": "/index.html",
+    "start_url": "/workout/index.html",
     "display": "standalone",
     "background_color": "#FFFFFF",
     "theme_color": "#FFFFFF",
