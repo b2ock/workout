@@ -89,7 +89,9 @@ function changeWorkout(workoutName, indexChange) {
             indexChange = 0;
         }
         workoutDropdown.selectedIndex += indexChange;
+        stopWorkout();
         displayWorkout();
+        
 }
 
 // this is for hiding functionality that isn't importatnt to a user when not on a workout
