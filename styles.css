@@ -8,16 +8,163 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0px;
+    font-family: "Inter";
+    color: white;
 }
 
+/* top level classes */
 .container {
     display: flex;
     flex-wrap: wrap;
-    margin: 10px;
 }
 
-#day-selector {
-    flex-basis: 100%;
+.selector-changes {
     -webkit-appearance: none;
-    ;
+    border: none;
+    background-color: rgb(0,0,0,0);
+    color: white;
+}
+
+/* currently used for the arrows on the right and left of the workout dropdown */
+.arrow {
+    background-color: rgb(0,0,0,0);
+    border: none;
+    color: white;
+}
+
+/* for tags in circles */
+.workout-tag {
+    background-color: #D9D9D9;
+    border-radius: 100px;
+    color: rgb(31, 31, 31);
+    padding: 0px 15px 0px 15px;
+    font-weight: 500;
+    height: 40px;
+    margin: 10px 10px 10px 0px;
+}
+
+/* center the text in the middle of an element */
+.center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(31, 31, 31);
+}
+
+/* not sure if this is the right thing, currently holds the ability to add weight to the weight */
+.workout-option {
+    font-weight: 600;
+    border: none;
+    flex-basis: 21%;
+    height: 40px;
+}
+
+.active-workout-title {
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.active-workout-info {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.active {
+    color: rgb(85, 206, 85);
+}
+
+/* INDIVIDUAL IDS*/
+
+/* selector for what day of the week you want to look at */
+#day-selector {
+    height: 100px;
+    flex-basis: 100%;
+    border: none;
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    padding: 40px 0px 0px 0px;
+}
+
+/* container around the workout info */
+#workout-info {
+    flex-basis: 100%;
+
+}
+
+/* the actual workout you're selecting (selector element) */
+#workout-dropdown {
+    width: auto;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 5px 0px;
+}
+
+/* the container that holds the arrows and the workout title inside of the workout info container */
+#workout-selector {
+    flex-basis: 100%;
+}
+
+/* the description of the workout */
+#workout-description {
+    height: 100px;
+    width: 100%;
+    font-size: 12px;
+}
+
+/* the container around the tags for equipment and muslce group */
+#tags {
+    flex-basis: 100%;
+}
+
+/* container around adding and removing weights */
+#weighting {
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* the information for the active workout, sets, reps, and weight */
+#active-workout {
+    width: 100%;
+    height: 400px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px 0px 10px;
+}
+
+/* the container to hold everything */
+#main-container {
+    margin: 0px 30px 0px 30px;
+}
+
+/* nav bar at the bottom */
+#nav {
+    position: fixed;
+    bottom: 0px;
+    background-color: #D9D9D9;
+    width: 100vw;
+    height: 70px;
+}
+
+/* the container for the start and reset buttons */
+#start-workout {
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#start-button {
+    flex-basis: 55%;
+    flex-grow: 0;
+}
+
+#rest-button {
+    flex-grow: 1;
+}
+
+[hidden] {
+    display: none;
 }

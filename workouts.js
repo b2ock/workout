@@ -5,7 +5,7 @@ let workouts = [
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Bench",
     "day": "Monday"
   },
   {
@@ -14,7 +14,7 @@ let workouts = [
     "sets": 3,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Monday"
   },
   {
@@ -23,16 +23,16 @@ let workouts = [
     "sets": 3,
     "reps": "10-12",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Machine",
     "day": "Monday"
   },
   {
-    "name": "Overhead Shoulder Press (Dumbbell/Barbell)",
+    "name": "Overhead Shoulder Press",
     "muscle_group": "Shoulders",
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Barbell",
     "day": "Monday"
   },
   {
@@ -41,7 +41,7 @@ let workouts = [
     "sets": 3,
     "reps": "12-15",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Monday"
   },
   {
@@ -50,7 +50,7 @@ let workouts = [
     "sets": 3,
     "reps": "To failure",
     "weight": undefined,
-    "equipment_needed": false,
+    "equipment": undefined,
     "day": "Monday"
   },
   {
@@ -59,7 +59,7 @@ let workouts = [
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": false,
+    "equipment": undefined,
     "day": "Tuesday"
   },
   {
@@ -68,7 +68,7 @@ let workouts = [
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Barbell",
     "day": "Tuesday"
   },
   {
@@ -77,7 +77,7 @@ let workouts = [
     "sets": 3,
     "reps": "10-12",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Machine",
     "day": "Tuesday"
   },
   {
@@ -86,7 +86,7 @@ let workouts = [
     "sets": 3,
     "reps": "10-12",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Tuesday"
   },
   {
@@ -95,7 +95,7 @@ let workouts = [
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Barbell",
     "day": "Tuesday"
   },
   {
@@ -104,7 +104,7 @@ let workouts = [
     "sets": 3,
     "reps": "10-12",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Tuesday"
   },
   {
@@ -113,16 +113,16 @@ let workouts = [
     "sets": 3,
     "reps": "12-15",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Machine",
     "day": "Tuesday"
   },
   {
-    "name": "Squats (Barbell or Dumbbell)",
+    "name": "Squats",
     "muscle_group": "Legs",
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Barbell",
     "day": "Wednesday"
   },
   {
@@ -131,25 +131,16 @@ let workouts = [
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
-    "day": "Wednesday"
-  },
-  {
-    "name": "Leg Press",
-    "muscle_group": "Legs",
-    "sets": 3,
-    "reps": "10-12",
-    "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Barbell",
     "day": "Wednesday"
   },
   {
     "name": "Lunges",
     "muscle_group": "Legs",
     "sets": 3,
-    "reps": "10 (each leg)",
+    "reps": "10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Wednesday"
   },
   {
@@ -158,7 +149,7 @@ let workouts = [
     "sets": 4,
     "reps": "15-20",
     "weight": undefined,
-    "equipment_needed": false,
+    "equipment": undefined,
     "day": "Wednesday"
   },
   {
@@ -167,7 +158,7 @@ let workouts = [
     "sets": 3,
     "reps": "15",
     "weight": undefined,
-    "equipment_needed": false,
+    "equipment": undefined,
     "day": "Wednesday"
   },
   {
@@ -176,7 +167,7 @@ let workouts = [
     "sets": 3,
     "reps": "45 seconds hold",
     "weight": undefined,
-    "equipment_needed": false,
+    "equipment": undefined,
     "day": "Wednesday"
   },
   {
@@ -185,7 +176,7 @@ let workouts = [
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Thursday"
   },
   {
@@ -194,7 +185,7 @@ let workouts = [
     "sets": 3,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Barbell",
     "day": "Thursday"
   },
   {
@@ -203,7 +194,7 @@ let workouts = [
     "sets": 3,
     "reps": "10-12",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Thursday"
   },
   {
@@ -212,16 +203,16 @@ let workouts = [
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": false,
+    "equipment": undefined,
     "day": "Thursday"
   },
   {
-    "name": "Overhead Tricep Extension (Dumbbell/Barbell)",
+    "name": "Overhead Tricep Extension",
     "muscle_group": "Triceps",
     "sets": 3,
     "reps": "10-12",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Thursday"
   },
   {
@@ -230,7 +221,7 @@ let workouts = [
     "sets": 3,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Bench",
     "day": "Thursday"
   },
   {
@@ -239,7 +230,7 @@ let workouts = [
     "sets": 4,
     "reps": "5-8",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Barbell",
     "day": "Friday"
   },
   {
@@ -248,7 +239,7 @@ let workouts = [
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Barbell",
     "day": "Friday"
   },
   {
@@ -257,7 +248,7 @@ let workouts = [
     "sets": 3,
     "reps": "10-12",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Machine",
     "day": "Friday"
   },
   {
@@ -266,7 +257,7 @@ let workouts = [
     "sets": 3,
     "reps": "10-12",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Friday"
   },
   {
@@ -275,7 +266,7 @@ let workouts = [
     "sets": 3,
     "reps": "12-15",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Friday"
   },
   {
@@ -284,7 +275,7 @@ let workouts = [
     "sets": 4,
     "reps": "8-10",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Barbell",
     "day": "Saturday"
   },
   {
@@ -293,25 +284,16 @@ let workouts = [
     "sets": 3,
     "reps": "10-12",
     "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Machine",
     "day": "Saturday"
   },
   {
     "name": "Walking Lunges",
     "muscle_group": "Legs",
     "sets": 3,
-    "reps": "10-12 (each leg)",
+    "reps": "10-12",
     "weight": undefined,
-    "equipment_needed": true,
-    "day": "Saturday"
-  },
-  {
-    "name": "Seated Calf Raises",
-    "muscle_group": "Calves",
-    "sets": 4,
-    "reps": "15-20",
-    "weight": undefined,
-    "equipment_needed": true,
+    "equipment": "Dumbbell",
     "day": "Saturday"
   }
 ]
