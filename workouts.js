@@ -18,7 +18,7 @@ let workouts = [
     "day": "Monday"
   },
   {
-    "name": "Pec Deck Machine / Cable Flyes",
+    "name": "Cable Flyes",
     "muscle_group": "Chest",
     "sets": 3,
     "reps": "10-12",
@@ -279,7 +279,7 @@ let workouts = [
     "day": "Saturday"
   },
   {
-    "name": "Leg Curls (Hamstring Focus)",
+    "name": "Leg Curls",
     "muscle_group": "Hamstrings",
     "sets": 3,
     "reps": "10-12",
