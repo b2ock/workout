@@ -9,6 +9,7 @@ function startWorkout() {
     document.querySelector('#start-button').style = "flex-basis: 25%; transition: 1s;"
     document.querySelector('#start-button').onclick = stopWorkout;
     document.querySelector('#rest-button').innerText = "Rest";
+    document.querySelector('#set-info').innerText = `${sets}/${selectedWorkout.sets}`;
 }
 
 function stopWorkout() {
