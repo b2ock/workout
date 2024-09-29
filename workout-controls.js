@@ -42,6 +42,7 @@ function finishWorkout() {
     document.querySelector('#start-button').innerText = "Start";
     document.querySelector('#start-button').style = "flex-basis: 55%; transition: 1s;";
     document.querySelector('#start-button').onclick = startWorkout;
+    document.querySelector('#rest-button').onclick = restWorkout;
     changeWorkout(selectedWorkout, 1);
     sets = 0;
 }
