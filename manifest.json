@@ -3,8 +3,8 @@
     "short_name": "get bricked",
     "start_url": "/workout/index.html",
     "display": "standalone",
-    "background_color": "#a474fb",
-    "theme_color": "#5d5df9",
+    "background_color": "#555555",
+    "theme_color": "#555555",
     "orientation": "portrait",
     "icons" : [
         {
