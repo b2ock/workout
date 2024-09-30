@@ -36,6 +36,7 @@ function getDayWorkouts() {
 
 // display workout in the workout-display div
 let workoutDisplay = document.querySelector('#workout-description');
+
 function displayWorkout() {
     console.log(workoutDropdown[workoutDropdown.selectedIndex]);
     if (workoutDropdown.value == "Warm Up") {
@@ -62,6 +63,7 @@ function displayWorkout() {
     let sets = workout.sets;
     let reps = workout.reps;
     let weight = localStorage.getItem(workout.name);
+    let description = workout.description;
 
     // determine what needs to happen to undefined items
     // undefined = --
@@ -108,7 +110,9 @@ function displayWorkout() {
     document.querySelector('#rep-info').innerText = reps;
     // display weight
     document.querySelector('#weight-info').innerText = weight;
-    workoutDisplay.innerText = workout.day;
+
+    // set the description
+    workoutDisplay.innerText = description;
     
 }
 
