@@ -152,7 +152,3 @@ function showWorkoutOptions() {
         console.error("Enabling workout-options failed");
     }
 }
-
-function hideTag(tag) {
-    tag.setAttribute('hidden', 'true');
-}
