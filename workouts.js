@@ -7,7 +7,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Monday",
-    "description": "Perform light cardio\nand dynamic stretches\nto get muscles warmed\nup for lifting."
+    "description": "Perform light cardio and dynamic stretches to increase blood flow and mobility, preparing muscles and joints for the workout ahead."
   },
   {
     "name": "Flat Barbell Bench Press",
@@ -17,7 +17,7 @@ let workouts = [
     "weight": null,
     "equipment": "Bench",
     "day": "Monday",
-    "description": "Lie on bench, lower bar\nto chest, press upward\nuntil arms are extended."
+    "description": "Lie on a flat bench, lower the barbell to your chest, and press it upward until your arms are fully extended, focusing on your chest muscles."
   },
   {
     "name": "Incline Dumbbell Press",
@@ -27,7 +27,7 @@ let workouts = [
     "weight": null,
     "equipment": "Dumbbell",
     "day": "Monday",
-    "description": "Press dumbbells upward\nat an incline to target\nupper chest muscles."
+    "description": "Press dumbbells upward on an incline bench to target the upper chest muscles, keeping your arms steady and focusing on control."
   },
   {
     "name": "Cable Flyes",
@@ -37,7 +37,7 @@ let workouts = [
     "weight": null,
     "equipment": "Machine",
     "day": "Monday",
-    "description": "Pull cables together\nin a wide arc, squeezing\nchest at the top."
+    "description": "Stand between cable machines and pull the handles together in a wide arc until they meet in front of you, focusing on squeezing your chest."
   },
   {
     "name": "Overhead Shoulder Press",
@@ -47,7 +47,7 @@ let workouts = [
     "weight": null,
     "equipment": "Barbell",
     "day": "Monday",
-    "description": "Press bar overhead from\nshoulder height, fully\nextending arms."
+    "description": "Press the barbell upward from shoulder height until your arms are fully extended overhead, keeping your core engaged and back straight."
   },
   {
     "name": "Lateral Raises",
@@ -57,7 +57,7 @@ let workouts = [
     "weight": null,
     "equipment": "Dumbbell",
     "day": "Monday",
-    "description": "Raise dumbbells outward\nto shoulder height to\ntarget the lateral delts."
+    "description": "Raise the dumbbells out to your sides until they reach shoulder height, focusing on using your lateral deltoids and keeping the movement controlled."
   },
   {
     "name": "Push-ups",
@@ -67,7 +67,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Monday",
-    "description": "Lower body to ground\nwith arms bent, press\nupward until arms extend."
+    "description": "Lower your body to the ground by bending your arms, then push back up until your arms are fully extended, maintaining a straight body."
   },
   {
     "name": "Pull-ups",
@@ -77,7 +77,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Tuesday",
-    "description": "Pull body up until chin\nreaches bar, lower back\ndown with control."
+    "description": "Grip the bar with palms facing forward and pull yourself up until your chin reaches the bar, then lower back down with control."
   },
   {
     "name": "Warm Up",
@@ -87,7 +87,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Tuesday",
-    "description": "Perform light cardio\nand dynamic stretches\nto get muscles warmed\nup for lifting."
+    "description": "Perform light cardio and dynamic stretches to increase blood flow and mobility, preparing muscles and joints for the workout ahead."
   },
   {
     "name": "Bent-over Barbell Rows",
@@ -97,7 +97,7 @@ let workouts = [
     "weight": null,
     "equipment": "Barbell",
     "day": "Tuesday",
-    "description": "Pull barbell toward\nchest while bent over,\nsqueezing upper back."
+    "description": "Bend forward at the hips and pull the barbell toward your chest, squeezing your upper back muscles as you row, then lower it back down."
   },
   {
     "name": "Lat Pulldown",
@@ -107,7 +107,7 @@ let workouts = [
     "weight": null,
     "equipment": "Machine",
     "day": "Tuesday",
-    "description": "Pull bar down to chest,\nfocusing on engaging\nback muscles."
+    "description": "Sit at a lat pulldown machine and pull the bar down toward your chest, focusing on engaging your back muscles and controlling the movement."
   },
   {
     "name": "Single-Arm Dumbbell Row",
@@ -117,7 +117,7 @@ let workouts = [
     "weight": null,
     "equipment": "Dumbbell",
     "day": "Tuesday",
-    "description": "Pull dumbbell to waist,\nfocusing on contracting\nyour lats and back."
+    "description": "Place one knee on a bench, pull the dumbbell toward your waist, and squeeze your back muscles, then lower it back down."
   },
   {
     "name": "Barbell Curls",
@@ -127,7 +127,7 @@ let workouts = [
     "weight": null,
     "equipment": "Barbell",
     "day": "Tuesday",
-    "description": "Curl barbell upward\nkeeping elbows close to\nyour sides."
+    "description": "Stand with the barbell in your hands, curl it upward toward your chest while keeping your elbows close to your body, then lower it back down."
   },
   {
     "name": "Dumbbell Hammer Curls",
@@ -137,7 +137,7 @@ let workouts = [
     "weight": null,
     "equipment": "Dumbbell",
     "day": "Tuesday",
-    "description": "Curl dumbbells with\npalms facing inward,\nengaging biceps fully."
+    "description": "Hold dumbbells with palms facing inward and curl them toward your shoulders, focusing on engaging the biceps throughout the movement."
   },
   {
     "name": "Face Pulls",
@@ -147,7 +147,7 @@ let workouts = [
     "weight": null,
     "equipment": "Machine",
     "day": "Tuesday",
-    "description": "Pull rope attachment\ntoward face, engaging\nrear delts and traps."
+    "description": "Use a cable machine with a rope attachment, pulling it toward your face and squeezing your rear deltoids and upper back."
   },
   {
     "name": "Warm Up",
@@ -157,7 +157,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Wednesday",
-    "description": "Perform light cardio\nand dynamic stretches\nto get muscles warmed\nup for lifting."
+    "description": "Perform light cardio and dynamic stretches to increase blood flow and mobility, preparing muscles and joints for the workout ahead."
   },
   {
     "name": "Squats",
@@ -167,7 +167,7 @@ let workouts = [
     "weight": null,
     "equipment": "Barbell",
     "day": "Wednesday",
-    "description": "Lower body until thighs\nare parallel to the\nground, then stand up."
+    "description": "Lower your body by bending your knees until your thighs are parallel to the floor, then push back up to a standing position, keeping your back straight."
   },
   {
     "name": "Romanian Deadlifts",
@@ -177,7 +177,7 @@ let workouts = [
     "weight": null,
     "equipment": "Barbell",
     "day": "Wednesday",
-    "description": "Lower barbell to below\nthe knees, keeping a\nslight bend in knees."
+    "description": "Lower the barbell down your legs while keeping a slight bend in your knees and a straight back, focusing on your hamstrings."
   },
   {
     "name": "Lunges",
@@ -187,7 +187,7 @@ let workouts = [
     "weight": null,
     "equipment": "Dumbbell",
     "day": "Wednesday",
-    "description": "Step forward and lower\nbody until the rear knee\nnearly touches the\nground."
+    "description": "Step forward with one leg, lowering your body until your back knee nearly touches the ground, then push back up and alternate legs."
   },
   {
     "name": "Standing Calf Raises",
@@ -197,7 +197,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Wednesday",
-    "description": "Raise heels off ground,\ncontracting calves, then\nlower back down."
+    "description": "Raise your heels off the ground, contracting your calf muscles, then slowly lower your heels back down."
   },
   {
     "name": "Leg Raises",
@@ -207,7 +207,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Wednesday",
-    "description": "Raise legs from lying\nposition, keeping core\nengaged throughout."
+    "description": "Lie flat on your back and raise your legs until they are vertical, keeping your core engaged, then lower them back down."
   },
   {
     "name": "Planks",
@@ -217,7 +217,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Wednesday",
-    "description": "Hold plank position\nwith body straight and\ncore engaged."
+    "description": "Hold a plank position with your body in a straight line from head to heels, keeping your core tight throughout the duration of the hold."
   },
   {
     "name": "Warm Up",
@@ -227,27 +227,17 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Thursday",
-    "description": "Perform light cardio\nand dynamic stretches\nto get muscles warmed\nup for lifting."
+    "description": "Perform light cardio and dynamic stretches to increase blood flow and mobility, preparing muscles and joints for the workout ahead."
   },
   {
-    "name": "Flat Dumbbell Bench Press",
+    "name": "Incline Barbell Bench Press",
     "muscle_group": "Chest",
     "sets": 4,
     "reps": "8-10",
     "weight": null,
-    "equipment": "Dumbbell",
+    "equipment": "Bench",
     "day": "Thursday",
-    "description": "Press dumbbells upward\nwhile lying flat on a\nbench to target chest."
-  },
-  {
-    "name": "Incline Barbell Press",
-    "muscle_group": "Chest",
-    "sets": 3,
-    "reps": "8-10",
-    "weight": null,
-    "equipment": "Barbell",
-    "day": "Thursday",
-    "description": "Press barbell upward\nat an incline to focus\non upper chest."
+    "description": "Press the barbell upward on an incline bench to focus on the upper chest, keeping your elbows slightly flared."
   },
   {
     "name": "Dumbbell Flyes",
@@ -257,7 +247,7 @@ let workouts = [
     "weight": null,
     "equipment": "Dumbbell",
     "day": "Thursday",
-    "description": "Open arms wide and\nsqueeze dumbbells\ntogether above chest."
+    "description": "Lie on a bench, open your arms wide, and bring the dumbbells together above your chest, focusing on squeezing your chest muscles."
   },
   {
     "name": "Tricep Dips",
@@ -267,7 +257,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Thursday",
-    "description": "Lower body down by\nbending elbows, then\npress upward."
+    "description": "Lower your body down by bending your elbows, then push back up, keeping your core tight and shoulders stable."
   },
   {
     "name": "Overhead Tricep Extension",
@@ -277,7 +267,7 @@ let workouts = [
     "weight": null,
     "equipment": "Dumbbell",
     "day": "Thursday",
-    "description": "Extend arms overhead,\nthen lower dumbbell\nbehind your head."
+    "description": "Hold a dumbbell with both hands above your head and lower it behind your head, extending your triceps as you raise it back up."
   },
   {
     "name": "Close-grip Bench Press",
@@ -287,7 +277,7 @@ let workouts = [
     "weight": null,
     "equipment": "Bench",
     "day": "Thursday",
-    "description": "Press bar upward with\nhands close together,\nengaging triceps."
+    "description": "Press the bar upward with a narrow grip to focus on engaging the triceps, keeping your elbows close to your body."
   },
   {
     "name": "Warm Up",
@@ -297,7 +287,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Friday",
-    "description": "Perform light cardio\nand dynamic stretches\nto get muscles warmed\nup for lifting."
+    "description": "Perform light cardio and dynamic stretches to increase blood flow and mobility, preparing muscles and joints for the workout ahead."
   },
   {
     "name": "Deadlifts",
@@ -307,7 +297,7 @@ let workouts = [
     "weight": null,
     "equipment": "Barbell",
     "day": "Friday",
-    "description": "Lift barbell from the\nfloor, keeping back\nstraight and core tight."
+    "description": "Lift the barbell from the floor by extending your hips and knees, keeping your back straight and core tight throughout the movement."
   },
   {
     "name": "T-bar Rows",
@@ -317,7 +307,7 @@ let workouts = [
     "weight": null,
     "equipment": "Barbell",
     "day": "Friday",
-    "description": "Row T-bar upward,\nengaging your lats and\nupper back muscles."
+    "description": "Pull the T-bar toward your chest while keeping your torso angled forward, squeezing your back muscles as you row."
   },
   {
     "name": "Seated Cable Rows",
@@ -327,7 +317,7 @@ let workouts = [
     "weight": null,
     "equipment": "Machine",
     "day": "Friday",
-    "description": "Pull cable handle\ntoward torso, squeezing\nback muscles."
+    "description": "Sit at a cable machine and pull the handle toward your torso, squeezing your back muscles, then return to the starting position."
   },
   {
     "name": "Preacher Curls",
@@ -337,7 +327,7 @@ let workouts = [
     "weight": null,
     "equipment": "Dumbbell",
     "day": "Friday",
-    "description": "Curl dumbbell upward,\nkeeping upper arm\npressed against pad."
+    "description": "Sit at a preacher curl bench and curl the dumbbell upward, focusing on contracting your biceps and controlling the movement."
   },
   {
     "name": "Rear Delt Flyes",
@@ -347,7 +337,7 @@ let workouts = [
     "weight": null,
     "equipment": "Dumbbell",
     "day": "Friday",
-    "description": "Raise dumbbells out to\nsides while bent over,\ntargeting rear delts."
+    "description": "Bend forward and raise the dumbbells out to your sides, targeting your rear deltoids and upper back."
   },
   {
     "name": "Warm Up",
@@ -357,7 +347,7 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Saturday",
-    "description": "Perform light cardio\nand dynamic stretches\nto get muscles warmed\nup for lifting."
+    "description": "Perform light cardio and dynamic stretches to increase blood flow and mobility, preparing muscles and joints for the workout ahead."
   },
   {
     "name": "Front Squats",
@@ -367,7 +357,7 @@ let workouts = [
     "weight": null,
     "equipment": "Barbell",
     "day": "Saturday",
-    "description": "Lower body with bar\nacross the front of\nshoulders, then stand."
+    "description": "Lower your body with the barbell across the front of your shoulders, then push back up, focusing on keeping your core engaged."
   },
   {
     "name": "Leg Curls",
@@ -377,7 +367,7 @@ let workouts = [
     "weight": null,
     "equipment": "Machine",
     "day": "Saturday",
-    "description": "Curl your legs upward\nwhile lying on the leg\ncurl machine."
+    "description": "Curl your legs upward while lying on a leg curl machine, focusing on contracting your hamstrings throughout the movement."
   },
   {
     "name": "Walking Lunges",
@@ -387,7 +377,7 @@ let workouts = [
     "weight": null,
     "equipment": "Dumbbell",
     "day": "Saturday",
-    "description": "Step forward into a\nlunge while holding\ndumbbells at your side."
+    "description": "Step forward into a lunge while holding dumbbells at your sides, alternating legs with each step."
   },
   {
     "name": "Warm Up",
@@ -397,6 +387,6 @@ let workouts = [
     "weight": null,
     "equipment": null,
     "day": "Sunday",
-    "description": "Perform light cardio\nand dynamic stretches\nto get muscles warmed\nup for lifting."
+    "description": "Perform light cardio and dynamic stretches to increase blood flow and mobility, preparing muscles and joints for the workout ahead."
   }
 ]
