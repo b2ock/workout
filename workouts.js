@@ -1,5 +1,14 @@
 let workouts = [
   {
+    "name": "Warm Up",
+    "muscle_group": undefined,
+    "sets": undefined,
+    "reps": undefined,
+    "weight": undefined,
+    "equipment": undefined,
+    "day": "Monday"
+  },
+  {
     "name": "Flat Barbell Bench Press",
     "muscle_group": "Chest",
     "sets": 4,
@@ -63,6 +72,15 @@ let workouts = [
     "day": "Tuesday"
   },
   {
+    "name": "Warm Up",
+    "muscle_group": undefined,
+    "sets": undefined,
+    "reps": undefined,
+    "weight": undefined,
+    "equipment": undefined,
+    "day": "Tuesday"
+  },
+  {
     "name": "Bent-over Barbell Rows",
     "muscle_group": "Back",
     "sets": 4,
@@ -115,6 +133,15 @@ let workouts = [
     "weight": undefined,
     "equipment": "Machine",
     "day": "Tuesday"
+  },
+  {
+    "name": "Warm Up",
+    "muscle_group": undefined,
+    "sets": undefined,
+    "reps": undefined,
+    "weight": undefined,
+    "equipment": undefined,
+    "day": "Wednesday"
   },
   {
     "name": "Squats",
@@ -171,6 +198,15 @@ let workouts = [
     "day": "Wednesday"
   },
   {
+    "name": "Warm Up",
+    "muscle_group": undefined,
+    "sets": undefined,
+    "reps": undefined,
+    "weight": undefined,
+    "equipment": undefined,
+    "day": "Thursday"
+  },
+  {
     "name": "Flat Dumbbell Bench Press",
     "muscle_group": "Chest",
     "sets": 4,
@@ -225,6 +261,15 @@ let workouts = [
     "day": "Thursday"
   },
   {
+    "name": "Warm Up",
+    "muscle_group": undefined,
+    "sets": undefined,
+    "reps": undefined,
+    "weight": undefined,
+    "equipment": undefined,
+    "day": "Friday"
+  },
+  {
     "name": "Deadlifts",
     "muscle_group": "Back",
     "sets": 4,
@@ -268,6 +313,15 @@ let workouts = [
     "weight": undefined,
     "equipment": "Dumbbell",
     "day": "Friday"
+  },
+  {
+    "name": "Warm Up",
+    "muscle_group": undefined,
+    "sets": undefined,
+    "reps": undefined,
+    "weight": undefined,
+    "equipment": undefined,
+    "day": "Saturday"
   },
   {
     "name": "Front Squats",

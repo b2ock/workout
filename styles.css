@@ -117,6 +117,7 @@ body {
 /* the container around the tags for equipment and muslce group */
 #tags {
     flex-basis: 100%;
+    font-size: 15px;
 }
 
 /* container around adding and removing weights */
