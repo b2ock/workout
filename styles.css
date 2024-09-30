@@ -118,6 +118,7 @@ body {
 #tags {
     flex-basis: 100%;
     font-size: 15px;
+    height: 60px;
 }
 
 /* container around adding and removing weights */
@@ -151,19 +152,21 @@ body {
 
 /* the container for the start and reset buttons */
 #start-workout {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     font-size: 12px;
     font-weight: 600;
+    transition: 1s;
 }
 
 #start-button {
-    flex-basis: 55%;
+    flex-basis: 100%;
     flex-grow: 0;
 }
 
 #rest-button {
     flex-grow: 1;
+    transition: 1s;
 }
 
 [hidden] {

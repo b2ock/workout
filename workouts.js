@@ -349,5 +349,14 @@ let workouts = [
     "weight": undefined,
     "equipment": "Dumbbell",
     "day": "Saturday"
+  },
+  {
+    "name": "Warm Up",
+    "muscle_group": undefined,
+    "sets": undefined,
+    "reps": undefined,
+    "weight": undefined,
+    "equipment": undefined,
+    "day": "Sunday"
   }
 ]

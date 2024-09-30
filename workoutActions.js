@@ -19,5 +19,4 @@ function removeWeight(weight) {
     
     localStorage.setItem(selectedWorkout.name, currentWeight - weight);
     displayWorkout();
-    console.log('hello');
 }
