@@ -1,4 +1,7 @@
+let sets = 0;
+
 function startWorkout() {
+    sets = 1;
     // turn the workout info green when started
     let activeItems = document.querySelectorAll('.active-workout-info');
     for (item of activeItems){
@@ -29,14 +32,16 @@ function stopWorkout() {
     sets = 0;
 }
 
-let sets = 0;
+
 function restWorkout() {
+    console.log('this');
     sets ++;
     document.querySelector('#set-info').innerText = `${sets}/${selectedWorkout.sets}`;
     if (sets == selectedWorkout.sets) {
         document.querySelector('#rest-button').innerText = 'Finish';
         document.querySelector('#rest-button').onclick = finishWorkout;
     }
+    let countdown = setInterval(timerCount, 1000, 90);
 }
 
 function finishWorkout() {
