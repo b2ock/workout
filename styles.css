@@ -94,7 +94,7 @@ body {
 /* selector for what day of the week you want to look at */
 #day-selector {
     height: 100px;
-    flex-basis: 100%;
+    flex-basis: auto;
     border: none;
     font-size: 40px;
     color: white;

@@ -7,7 +7,6 @@ function addWeight(weight) {
     
     localStorage.setItem(selectedWorkout.name, currentWeight + weight);
     displayWorkout();
-    console.log('hi');
 }
 
 // remove weight from the workout

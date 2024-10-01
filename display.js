@@ -1,5 +1,6 @@
 let dayWorkouts;
 let selectedWorkout;
+let currentSet = 0;
 
 // get workouts based on the day selected in workoutDropdown
 let workoutDropdown = document.querySelector('#workout-dropdown');
@@ -38,13 +39,10 @@ function getDayWorkouts() {
 let workoutDisplay = document.querySelector('#workout-description');
 
 function displayWorkout() {
-    console.log(workoutDropdown[workoutDropdown.selectedIndex]);
     if (workoutDropdown.value == "Warm Up") {
         hideWorkoutOptions();
         document.querySelector('#start-button').setAttribute('disabled', 'true');
-        console.log('hidden');
     } else {
-        console.log('shown');
         showWorkoutOptions();
     }
     
@@ -64,12 +62,13 @@ function displayWorkout() {
     let reps = workout.reps;
     let weight = localStorage.getItem(workout.name);
     let description = workout.description;
+    
 
     // determine what needs to happen to undefined items
     // undefined = --
     // sets
     if (sets) {
-        sets = `0/${sets}`;
+        sets = `${currentSet}/${sets}`;
     } 
     else {
         sets = '--';
