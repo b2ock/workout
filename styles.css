@@ -83,6 +83,12 @@ body {
     width: 40%;
 }
 
+.weight-option {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+}
+
 /* INDIVIDUAL IDS*/
 
 /* selector for what day of the week you want to look at */

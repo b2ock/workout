@@ -27,9 +27,9 @@
 
         <div id="workout-info" class="container">
             <div id=workout-selector class="container">
-                <button class="arrow" onclick="changeWorkout(workoutDropdown.value, -1)"><</button>
+                <button class="arrow" onclick="changeWorkout(workoutDropdown.value, -1)">&#10094</button>
                 <select id="workout-dropdown" class="selector-changes" onchange="displayWorkout()"></select>
-                <button class="arrow" onclick="changeWorkout(workoutDropdown.value, 1)">></button>
+                <button class="arrow" onclick="changeWorkout(workoutDropdown.value, 1)">&#10095</button>
             </div>
             <div id="tags" class="container">
                 <div id="muscle" class="workout-tag center-text"></div>
@@ -39,10 +39,10 @@
         </div>
 
         <div id="weighting" class="container">
-            <button class="workout-option workout-tag" onclick="removeWeight(5)">- 5 lbs</button>
-            <button class="workout-option workout-tag" onclick="removeWeight(1)">- 1 lb</button>
-            <button class="workout-option workout-tag" onclick="addWeight(1)">+ 1 lb</button>
-            <button class="workout-option workout-tag" onclick="addWeight(5)">+ 5 lbs</button>
+            <button class="workout-option workout-tag weight-option" onclick="removeWeight(5)">- 5 lbs</button>
+            <button class="workout-option workout-tag weight-option" onclick="removeWeight(1)">- 1 lb</button>
+            <button class="workout-option workout-tag weight-option" onclick="addWeight(1)">+ 1 lb</button>
+            <button class="workout-option workout-tag weight-option" onclick="addWeight(5)">+ 5 lbs</button>
             
         </div>
 
