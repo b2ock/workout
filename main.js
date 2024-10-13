@@ -1,6 +1,6 @@
 let week;
 const today = new Date();
-localStorage.clear();
+
 function main() {
     // check it you need to use default workouts
     let workoutsReady = localStorage.getItem('week');
