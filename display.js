@@ -1,157 +1,157 @@
-let dayWorkouts;
-let selectedWorkout;
-let currentSet = 0;
+function display() {
+    // get all the elements
+    let day = document.querySelector('#day');
+    let workoutTitle = document.querySelector('#workout-title');
+    let equipment = document.querySelector('#equipment');
+    let muscleGroup = document.querySelector('#muscle-group');
+    let description = document.querySelector('#description');
+    let sets = document.querySelector('#sets');
+    let reps = document.querySelector('#reps');
+    let weight = document.querySelector('#weight');
+    // set states to active
+    document.querySelector('#start-button').removeAttribute('disabled');
+    // display the workout info
+    day.innerText = week.selectedDay.name;
 
-// get workouts based on the day selected in workoutDropdown
-let workoutDropdown = document.querySelector('#workout-dropdown');
-let daySelector = document.querySelector('#day-selector');
-function getDayWorkouts() {
-    workoutDropdown.innerHTML = "";
-// workouts comes from the workout.js file
-    dayWorkouts = workouts
-        .filter(workout => workout.day.toLowerCase() == daySelector.value);
-    // put warm up at the front
-    let warmUp;
-    for (workout of dayWorkouts) {
-        if (workout.name == 'Warm Up') {
-            warmUp = workout;
+    // set active workout to the selectedDay's selectedWorkout
+    let selectedWorkout = week.selectedDay.selectedWorkout;
+    // set workout title
+    workoutTitle.innerText = selectedWorkout.name;
+    // set equipment
+    if (selectedWorkout.equipment) {
+        equipment.removeAttribute('hidden');
+        equipment.innerText = selectedWorkout.equipment;
+    }
+    else {
+        equipment.setAttribute('hidden', 'true');
+    }
+    // set muscle group
+    if (selectedWorkout.muscleGroup) {
+        muscleGroup.removeAttribute('hidden');
+        muscleGroup.innerText = selectedWorkout.muscleGroup;
+    }
+    else {
+        muscleGroup.setAttribute('hidden', 'true');
+    }
+    // set description
+    description.innerText = selectedWorkout.description;
+    // set sets
+    sets.innerText = selectedWorkout.sets ? `${selectedWorkout.currentSet}/${selectedWorkout.sets}` : '--';
+    // set reps
+    if (selectedWorkout.repsLower) {
+        if (selectedWorkout.repsUpper) {
+            reps.innerText = `${selectedWorkout.repsLower}-${selectedWorkout.repsUpper}`;
         }
-    }
-    let index = dayWorkouts.indexOf(warmUp);
-    let item = dayWorkouts.splice(index, 1)[0];
-    dayWorkouts.unshift(item);
-    // dayWorkoutNames
-    let dayWorkoutNames = dayWorkouts
-        .map(workout => workout.name);
-// what do I need to do to fix warm-up
-// when warm up shows make sure to call hideWorkouts()
-
-    for (workoutName of dayWorkoutNames) {
-        let option = document.createElement('option');
-        option.value = workoutName;
-        option.innerHTML = workoutName;
-        workoutDropdown.appendChild(option);
-    }
-    displayWorkout();
-}
-
-// display workout in the workout-display div
-let workoutDisplay = document.querySelector('#workout-description');
-
-function displayWorkout() {
-    if (workoutDropdown.value == "Warm Up") {
-        hideWorkoutOptions();
-        document.querySelector('#start-button').setAttribute('disabled', 'true');
-    } else {
-        showWorkoutOptions();
-    }
-    
-    let workout
-    for (item of dayWorkouts) {
-        if (item.name == workoutDropdown.value) {
-            workout = item;
-            selectedWorkout = workout;
-            break;
+        else {
+            reps.innerText = selectedWorkout.repsLower;
         }
-    }
-
-    // get things we're trying to display
-    let muscle = workout.muscle_group;
-    let equipment = workout.equipment;
-    let sets = workout.sets;
-    let reps = workout.reps;
-    let weight = localStorage.getItem(workout.name);
-    let description = workout.description;
-    
-
-    // determine what needs to happen to undefined items
-    // undefined = --
-    // sets
-    if (sets) {
-        sets = `${currentSet}/${sets}`;
     } 
     else {
-        sets = '--';
+        reps.innerText = '--';
     }
-    // reps
-    if (!reps) {
-        reps = '--';
-    }
-    if (reps.toLowerCase() == "to failure") {
-        reps = "∞";
-    }
-    // weight
-    if (!weight || weight == 0 || isNaN(weight)) {
-        weight = '--';
-    }
-    // other things will be hidden in the next section
+    // set weight
+    weight.innerText = selectedWorkout.weight ? selectedWorkout.weight : '--';
 
-    // display the things
-    // display muscle
-    if (muscle) {
-        document.querySelector('#muscle').removeAttribute('hidden');
-        document.querySelector("#muscle").innerText = muscle;
+    // disable items if there isn't sets
+    if (!selectedWorkout.sets) {
+        document.querySelector('#start-button').setAttribute('disabled', 'true');
+    }
+}
+
+function nextSet() {
+    let activeWorkout = week.selectedDay.selectedWorkout;
+    if (activeWorkout.currentSet == activeWorkout.sets) {
+        week.selectedDay.changeWorkout(1);
+        activeWorkout.currentSet = 0;
+    } 
+    else {
+        activeWorkout.currentSet += 1;
+    }
+    display();
+}
+
+function activateWorkout() {
+    let workoutDetailChildren = document.querySelector('#workout-details').children;
+    for (let node of workoutDetailChildren) {
+        node.classList.add('active');
+    }
+}
+
+function deactivateWorkout() {
+    let workoutDetailChildren = document.querySelector('#workout-details').children;
+    for (let node of workoutDetailChildren) {
+        node.classList.remove('active');
+    }
+}
+
+function showNextButton() {
+    let nextButton = document.querySelector('#next-workout');
+    nextButton.classList.add('shown');
+    let startButton = document.querySelector('#start-button');
+    startButton.innerText = "Stop";
+    startButton.onclick = hideNextButton;
+    activateWorkout();
+}
+
+function hideNextButton() {
+    let nextButton = document.querySelector('#next-workout');
+    nextButton.classList.remove('shown');
+    let startButton = document.querySelector('#start-button');
+    startButton.innerText = "Start";
+    startButton.onclick = showNextButton;
+    deactivateWorkout();
+}
+
+// swipe gestures
+
+let touchStartX = 0;
+let touchEndX = 0;
+let touchY = 0;
+
+document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchY = e.changedTouches[0].screenY;
+});
+
+document.addEventListener('touchmove', (e) => {
+    touchEndX= e.changedTouches[0].screenX;
+})
+
+document.addEventListener('touchend', () => {
+    if (touchEndX === 0) return;
+
+    const swipeDistance = touchStartX - touchEndX;
+
+    const swipeThreshold = 100;
+
+    if (touchY < 300) {
+        if (swipeDistance > swipeThreshold) {
+            week.changeDay(1);
+            display();
+        }
+        if (swipeDistance < -swipeThreshold) {
+            week.changeDay(-1);
+            display();
+        }
     }
     else {
-        document.querySelector("#muscle").setAttribute('hidden', 'true');
-    }
-    //  display equipment
-    if (equipment) {
-        document.querySelector('#equipment').removeAttribute('hidden');
-        document.querySelector("#equipment").innerText = workout.equipment;
-    }
-    else {
-        document.querySelector("#equipment").setAttribute('hidden', 'true');
-    }
-    // display sets
-    document.querySelector('#set-info').innerText = sets;
-    // display reps
-    document.querySelector('#rep-info').innerText = reps;
-    // display weight
-    document.querySelector('#weight-info').innerText = weight;
-
-    // set the description
-    workoutDisplay.innerText = description;
-    
-}
-
-//  increment the workout in the workoutDropdown. indexChange determins if you move forwards or backwards using 1 and -1
-function changeWorkout(workoutName, indexChange) {
-    if (workoutDropdown.selectedIndex == 0 && indexChange == -1) {
-        workoutDropdown.selectedIndex = workoutDropdown.length - 1;
-        indexChange = 0;
-    }
-    if (workoutDropdown.selectedIndex == workoutDropdown.length - 1 && indexChange == 1) {
-            workoutDropdown.selectedIndex = 0;
-            indexChange = 0;
+        if (swipeDistance > swipeThreshold) {
+            week.selectedDay.changeWorkout(1);
+            display();
         }
-        workoutDropdown.selectedIndex += indexChange;
-        stopWorkout();
-        displayWorkout();
-        
-}
-
-// this is for hiding functionality that isn't importatnt to a user when not on a workout
-// like when they are on a warm up
-function hideWorkoutOptions() {
-    let workoutOptions = document.querySelectorAll('.workout-option');
-    try {
-        for (option of workoutOptions) {
-            option.setAttribute('disabled', 'true');
+        if (swipeDistance < -swipeThreshold) {
+            week.selectedDay.changeWorkout(-1);
+            display();
         }
-    } catch {
-        console.error("Disabling workout-options failed");
     }
-}
 
-// enable options for functionality that is important for workouts
-function showWorkoutOptions() {
-    let workoutOptions = document.querySelectorAll('.workout-option');
-    try {
-        for (option of workoutOptions) {
-            option.removeAttribute('disabled');
-        }
-    } catch {
-        console.error("Enabling workout-options failed");
-    }
-}
+    let nextButton = document.querySelector('#next-workout');
+    nextButton.classList.remove('shown');
+    let startButton = document.querySelector('#start-button');
+    startButton.innerText = "Start";
+    startButton.onclick = showNextButton;
+
+    touchStartX = 0;
+    touchEndX = 0;
+    touchY = 0;
+});

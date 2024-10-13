@@ -1,201 +1,138 @@
-:root {
-    --main-color: ;
-    --secondary-color: ;
-}
-
 body {
-    background: linear-gradient(#555555,#1d1d1d);
-    width: 100vw;
-    height: 100vh;
     margin: 0px;
-    font-family: "Inter";
-    color: white;
+    font-family: 'Inter';
+    background: linear-gradient(rgb(99, 99, 99), rgb(48, 48, 48));
+    overflow: hidden;
 }
 
-/* top level classes */
 .container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.selector-changes {
-    -webkit-appearance: none;
-    border: none;
-    background-color: rgb(0,0,0,0);
-    color: white;
-}
-
-/* currently used for the arrows on the right and left of the workout dropdown */
-.arrow {
-    background-color: rgb(0,0,0,0);
-    border: none;
-    color: white;
-}
-
-/* for tags in circles */
-.workout-tag {
-    background-color: #D9D9D9;
-    border-radius: 100px;
-    color: rgb(31, 31, 31);
-    padding: 0px 15px 0px 15px;
-    font-weight: 500;
-    height: 40px;
-    margin: 10px 10px 10px 0px;
-}
-
-/* center the text in the middle of an element */
-.center-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(31, 31, 31);
-}
-
-/* not sure if this is the right thing, currently holds the ability to add weight to the weight */
-.workout-option {
-    font-weight: 600;
-    border: none;
-    flex-basis: 21%;
-    height: 40px;
-}
-
-.active-workout-title {
-    font-size: 12px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.active-workout-info {
-    font-size: 48px;
-    font-weight: 500;
-    text-align: center;
-}
-
-.active {
-    color: rgb(85, 206, 85);
-}
-
-.active-workout-container {
-    width: 25%;
-}
-
-.active-workout-container:nth-child(2) {
-    width: 40%;
-}
-
-.weight-option {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    border: 1px solid rgb(255, 255, 255, 0.5);
-}
-
-/* INDIVIDUAL IDS*/
-
-/* selector for what day of the week you want to look at */
-#day-selector {
-    height: 100px;
-    flex-basis: auto;
-    border: none;
-    font-size: 40px;
-    color: white;
-    font-weight: 600;
-    text-decoration: underline;
-    padding: 40px 0px 0px 0px;
-}
-
-/* container around the workout info */
-#workout-info {
-    flex-basis: 100%;
-
-}
-
-/* the actual workout you're selecting (selector element) */
-#workout-dropdown {
-    width: auto;
-    font-weight: 600;
-    font-size: 20px;
-    margin: 5px 0px;
-}
-
-/* the container that holds the arrows and the workout title inside of the workout info container */
-#workout-selector {
-    flex-basis: 100%;
-}
-
-/* the description of the workout */
-#workout-description {
-    height: 100px;
-    width: 100%;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-}
-
-/* the container around the tags for equipment and muslce group */
-#tags {
-    flex-basis: 100%;
-    font-size: 15px;
-    height: 60px;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-/* container around adding and removing weights */
-#weighting {
-    width: 100%;
-    justify-content: space-between;
-}
-
-/* the information for the active workout, sets, reps, and weight */
-#active-workout {
-    width: 100%;
-    height: 300px;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 10px 0px 10px;
-}
-
-/* the container to hold everything */
 #main-container {
-    margin: 0px 30px 0px 30px;
+    width: 100vw;
+    height: 100vh;
+    align-content: space-between;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 1rem;
 }
 
-/* the container for the start and reset buttons */
-#start-workout {
-    flex-wrap: nowrap;
+button {
+    padding: 10px 0px 10px 0px;
+    border-radius: 100rem;
+    border: 0px solid black;
+}
+
+#section-one {
+    height: 400px;
+}
+
+    #day {
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 700;
+        align-self: baseline;
+    }
+
+    #workout-title {
+        width: 100%;
+        font-size: 1.5rem;
+        align-self: baseline;
+    }
+
+    #tags {
+        width: 100%;
+        font-size: 0.8rem;
+        align-self: baseline;
+        height: 3vh;
+    }
+
+        .tag {
+            padding: 10px 20px; 
+            background-color: rgb(0, 0, 0, 0.3);
+            border-radius: 100rem;
+            margin: 0px 5px 0px 0px;
+        }
+
+    #description {
+        width: 100%;
+        height: 11vh;
+        font-size: 0.9rem;
+        align-self: baseline;
+        overflow: scroll;
+    }
+
+    #weight-changes {
+        width: 100%;
+        justify-content: space-between;
+        align-self: baseline;
+    }
+
+        #weight-changes button {
+            width: 20%;
+        }
+
+#workout-details {
     width: 100%;
-    font-size: 12px;
-    font-weight: 600;
-    transition: 1s;
+    justify-content: space-around;
 }
+    .active {
+        color: rgb(122, 243, 122);
+    }
 
-#start-button {
-    flex-basis: 100%;
-    flex-grow: 0;
-}
+    #workout-detail-titles {
+        width: 100%;
+        font-size: 1rem;
+        justify-content: space-around;
+    }
 
-#rest-button {
-    flex-grow: 1;
-    transition: 1s;
-}
+    #workout-detail-titles div {
+        width: 30%;
+        text-align: center;
+    }
 
-[hidden] {
-    display: none;
-}
+    #details {
+        width: 100%;
+        font-size: 2.5rem;
+        justify-content: space-around;
+    }
 
-#timer {
-    position: relative;
-    bottom: 80px;
-    left: 55vw;
-    height: 30px;
-    width: 50px;
-}
+    #details div{
+        width: 30%;
+        text-align: center;
+    }
 
-#timer-info {
+#active-workout-actions {
     width: 100%;
-    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: -1;
+    justify-content: space-between;
+    position: relative;
 }
+
+    #active-workout-actions button {
+        margin: 0 5px;;
+        transition: all 0.5s ease;
+    }
+
+    #start-button {
+        flex-grow: 1;
+    }
+
+    .hidden {
+        flex-grow: 0;
+        opacity: 0;
+        transform: scaleX(0);
+        width: 0px;
+    }
+
+   .shown {
+        flex-grow: 2;
+        transform: scaleX(1);
+        opacity: 1;
+   }
+
+   
+    

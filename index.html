@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <title>Document</title>
+    <title>Workout</title>
     <link href="styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="manifest" href="/workout/manifest.json">
@@ -14,65 +14,56 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="main-container" class="container">
-        <select id="day-selector" class="selector-changes" onchange="getDayWorkouts()">
-            <option value="monday">Monday</option>
-            <option value="tuesday">Tuesday</option>
-            <option value="wednesday">Wednesday</option>
-            <option value="thursday">Thursday</option>
-            <option value="friday">Friday</option>
-            <option value="saturday">Saturday</option>
-            <option value="sunday">Sunday</option>
-        </select>
-
-        <div id="workout-info" class="container">
-            <div id=workout-selector class="container">
-                <button class="arrow" onclick="changeWorkout(workoutDropdown.value, -1)">&#10094</button>
-                <select id="workout-dropdown" class="selector-changes" onchange="displayWorkout()"></select>
-                <button class="arrow" onclick="changeWorkout(workoutDropdown.value, 1)">&#10095</button>
-            </div>
-            <div id="tags" class="container">
-                <div id="muscle" class="workout-tag center-text"></div>
-                <div id="equipment" class="workout-tag center-text"></div>
-            </div>
-            <div id="workout-description"></div>
+   
+<div id="main-container" class="container">
+    <div id="section-one" class="container">
+        <div id="day" class="container">
+            <button id="left-touchbox" class="touchbox"></button>
+            <button id="right-touchbox" class="touchbox"></button>
         </div>
-
-        <div id="weighting" class="container">
-            <button class="workout-option workout-tag weight-option" onclick="removeWeight(5)">- 5 lbs</button>
-            <button class="workout-option workout-tag weight-option" onclick="removeWeight(1)">- 1 lb</button>
-            <button class="workout-option workout-tag weight-option" onclick="addWeight(1)">+ 1 lb</button>
-            <button class="workout-option workout-tag weight-option" onclick="addWeight(5)">+ 5 lbs</button>
-            
+        <div id="workout-title" class="container">
+    
         </div>
-
-        <div id="active-workout" class="container">
-            <div id="sets" class="active-workout-container">
-                <div class="active-workout-title">set</div>
-                <div id="set-info" class="active-workout-info"></div>
-            </div>
-            <div id="reps" class="active-workout-container">
-                <div class="active-workout-title">reps</div>
-                <div id="rep-info" class="active-workout-info"></div>
-            </div>
-            <div id="weight" class="active-workout-container">
-                <div class="active-workout-title">weight</div>
-                <div id="weight-info" class="active-workout-info"></div>
-            </div>
+        <div id="tags" class="container">
+            <div id="equipment" class="tag"></div>
+            <div id="muscle-group" class="tag"></div>
         </div>
-        <div id="start-workout" class="container">
-            <button id="start-button" class="center-text workout-tag workout-option" onclick="startWorkout()">Start</button>
-            <button id="rest-button" hidden class="center-text workout-tag workout-option" onclick="restWorkout()">Next Set</button>
+        <div id="description" class="container">
+    
+        </div>
+        <div id="weight-changes" class="container">
+            <button id="minus-five" onclick="week.selectedDay.selectedWorkout.changeWeight(-5)">-5 lbs</button>
+            <button id="minus-one" onclick="week.selectedDay.selectedWorkout.changeWeight(-1)">-1 lb</button>
+            <button id="add-one" onclick="week.selectedDay.selectedWorkout.changeWeight(1)">+1 lb</button>
+            <button id="add-five" onclick="week.selectedDay.selectedWorkout.changeWeight(5)">+5 lbs</button>
         </div>
     </div>
-
- <!-- scripts -->
-    <script src="workouts.js"></script>
-    <script src="baseWeight.js"></script>
-    <script src="display.js"></script>
-    <script src="timeActions.js"></script>
-    <script src="workoutActions.js"></script>
-    <script src="workout-controls.js"></script>
     
+    <div id="workout-details" class="container">
+        <div id="workout-detail-titles" class="container">
+            <div id="sets-title">sets</div>
+            <div id="reps-title">reps</div>
+            <div id="weight-title">weight</div>
+        </div>
+        <div id="details" class="container">
+            <div id="sets"></div>
+            <div id="reps"></div>
+            <div id="weight"></div>
+        </div>
+        
+    </div>
+    <div id="active-workout-actions" class="container">
+        <button id="start-button" onclick="showNextButton(document.querySelector('#next-workout'))" class="workout-buttons">Start</button>
+        <button id="next-workout" class="workout-buttons hidden" onclick="nextSet()">Next</button>
+    </div>
+</div>
+
+<!-- scripts -->
+   <script src="Workout.js"></script>
+   <script src="Day.js"></script>
+   <script src="Week.js"></script>
+   <script src="default.js"></script>
+   <script src="display.js"></script>
+   <script src="main.js"></script>
 </body>
 </html>
