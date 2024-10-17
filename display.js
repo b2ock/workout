@@ -161,3 +161,57 @@ document.addEventListener('touchend', () => {
     touchEndX = 0;
     touchY = 0;
 });
+
+// organize workouts
+
+function toggleOrganizeWorkouts() {
+    let mainContainer = document.querySelector('#main-container');
+    let organizationList = document.querySelector('#week-organization');
+    let toggleButton = document.querySelector('#organization-list');
+
+    createOrganizationList();
+
+    if (mainContainer.style.display == 'none') {
+        mainContainer.style.display = 'flex';
+        organizationList.style.display = 'none';
+        toggleButton.childNodes[0].classList.remove('fa-home');
+        toggleButton.childNodes[0].classList.add('fa-bars');
+    }
+    else {  
+        mainContainer.style.display = 'none';
+        organizationList.style.display = 'block';
+        toggleButton.childNodes[0].classList.remove('fa-bars');
+        toggleButton.childNodes[0].classList.add('fa-home');
+    }
+    
+}
+
+function createOrganizationList() {
+    let organizationDayTemplate = document.querySelector('.organization-day-template');
+    let organizationDayNameTemplate = document.querySelector('.organization-day');
+    let organizationWorkoutTemplate = document.querySelector('.organization-day-workout');
+    let organizationWorkoutAdd = document.querySelector('.organization-add-workout');
+
+    let organizationWeek = document.querySelector('#week-organization');
+
+    organizationWeek.innerHTML = '';
+
+    for (let organizationDay of week.days) {
+        let day = organizationDayTemplate.cloneNode(false);
+        let name = organizationDayNameTemplate.cloneNode(false);
+        name.innerText = organizationDay.name;
+        day.appendChild(name);
+
+        for (let workout of organizationDay.workouts) {
+            let organizationWorkout = organizationWorkoutTemplate.cloneNode(true);
+            let workoutTitle = organizationWorkout.childNodes[1].childNodes[3];
+            workoutTitle.innerText = workout.name;
+            day.appendChild(organizationWorkout);
+        }
+        
+        let addWorkout = organizationWorkoutAdd.cloneNode(true);
+        day.appendChild(addWorkout);
+
+        organizationWeek.appendChild(day);
+    }
+}

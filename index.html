@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>Workout</title>
+    <script src="https://kit.fontawesome.com/8da063ca98.js" crossorigin="anonymous"></script>
     <link href="styles.css" rel="stylesheet">
+    <link href="week-organization.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="manifest" href="/workout/manifest.json">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,12 +60,39 @@
     </div>
 </div>
 
+<!-- organization, add and remove workouts -->
+<button id="organization-list" onclick="toggleOrganizeWorkouts()"><i class="fa-solid fa-bars"></i></button>
+
+<div id="week-organization">
+    <div id="organization-template">
+        <div class="organization-day-template">
+            <div class="organization-day">Monday</div>
+            <div class="organization-day-workout">
+                <div class="organization-workout">
+                    <div class="workout-hamburger center-item"><i class="fa-solid fa-bars"></i></div>
+                    <div class="workout-title">workout title</div>
+                    <div class="workout-delete center-item"><i class="fa-solid fa-trash"></i></div>
+                </div>
+            </div>
+            <div class="organization-day-workout organization-add-workout">
+                <div class="organization-workout">
+                    <div class="workout-hamburger center-item"><i class="fa-solid fa-plus"></i></div>
+                    <div class="workout-title">add workout</div>
+                    <div class="workout-delete center-item"><i class="fa-solid"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- scripts -->
+   
    <script src="Workout.js"></script>
    <script src="Day.js"></script>
    <script src="Week.js"></script>
    <script src="default.js"></script>
    <script src="display.js"></script>
    <script src="main.js"></script>
+
 </body>
 </html>
