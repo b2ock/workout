@@ -71,17 +71,23 @@ function nextSet() {
 }
 
 function activateWorkout() {
+    let activeWorkout = week.selectedDay.selectedWorkout;
     let workoutDetailChildren = document.querySelector('#workout-details').children;
     for (let node of workoutDetailChildren) {
         node.classList.add('active');
     }
+    activeWorkout.currentSet = 1;
+    display();
 }
 
 function deactivateWorkout() {
+    let activeWorkout = week.selectedDay.selectedWorkout;
     let workoutDetailChildren = document.querySelector('#workout-details').children;
     for (let node of workoutDetailChildren) {
         node.classList.remove('active');
     }
+    activeWorkout.currentSet = 0;
+    display();
 }
 
 function showNextButton() {
