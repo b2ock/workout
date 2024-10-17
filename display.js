@@ -130,7 +130,7 @@ document.addEventListener('touchend', () => {
 
     const swipeThreshold = 100;
 
-    if (touchY < 200) {
+    if (touchY < 150) {
         if (swipeDistance > swipeThreshold) {
             week.changeDay(1);
             display();
