@@ -19,10 +19,22 @@ textarea {
     color: white;
 }
 
-.workout-detail {
+.add-workout-detail {
     text-align: center;
     font-size: 1.8rem;
     width: 30%;
+}
+
+.add-workout-detail:nth-child(1) {
+    width: 20%;
+}
+
+.add-workout-detail:nth-child(2) {
+    width: 40%;
+}
+
+.add-workout-detail:nth-child(3) {
+    width: 20%;
 }
 
     #add-reps input {
