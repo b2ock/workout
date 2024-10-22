@@ -22,11 +22,7 @@ textarea {
 .workout-detail {
     text-align: center;
     font-size: 1.8rem;
-}
-
-#add-reps {
-    display: flex;
-    justify-content: space-between;
+    width: 32%;
 }
 
     #add-reps input {

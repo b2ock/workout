@@ -233,7 +233,7 @@ function createOrganizationList() {
         
         let addWorkout = organizationWorkoutAdd.cloneNode(true);
         addWorkout.onclick = function() {
-            addWorkoutToDay(organizationDay.name);
+            addWorkoutToDay(organizationDay);
         }
         day.appendChild(addWorkout);
 
@@ -255,6 +255,7 @@ function addWorkoutToDay(day) {
     let organizationList = document.querySelector('#week-organization');
     let toggleButton = document.querySelector('#organization-list');
     let addContainer = document.querySelector('#add-main-container');
+    
     // hide all content
     mainContainer.style.display = "none";
     organizationList.style.display = 'none';
@@ -263,20 +264,44 @@ function addWorkoutToDay(day) {
 
     // get elements for adding workout
 
-    console.log(document.querySelector('#add-workout-title').value);
-    let workoutName = document.querySelector('#add-workout-title').value;
-    let workoutEquipment = document.querySelector('#add-equipment');
-    let workoutMuscleGroup = document.querySelector('#add-muscle-group');
-    let workoutDescription = document.querySelector('#add-description');
-    let workoutSets = document.querySelector('#add-details');
-    let workoutRepsLower = document.querySelector('#add-reps-lower');
-    let workoutRepsUpper = document.querySelector('#add-reps-upper');
-    let workoutWeight = document.querySelector('#add-weight');
-
-    let workoutDay = day;
+    document.querySelector('#add-day').innerText = day.name;
+    
+    // add day to the onclick event
+    document.querySelector('#save-workout').onclick = function() {
+        saveWorkout(day);
+    }
 
 }
 
-function saveWorkout(workout) {
+function saveWorkout(day) {
+    let newWorkout = {
+        "name": document.querySelector('#add-workout-title').value,
+        "equipment": document.querySelector('#add-equipment').value,
+        "muscleGroup": document.querySelector('#add-muscle-group').value,
+        "description": document.querySelector('#add-description').value,
+        "sets": document.querySelector('#add-sets').value,
+        "repsLower": document.querySelector('#add-reps-lower').value,
+        "repsUpper": document.querySelector('#add-reps-upper').value,
+        "weight": document.querySelector('#add-weight').value
+    }
+    
+    newWorkout = new Workout(newWorkout.name, newWorkout.muscleGroup, newWorkout.sets, newWorkout.repsLower, newWorkout.repsUpper, newWorkout.weight, newWorkout.equipment, newWorkout.description, per_hand=false);
+    
+    day.addWorkout(newWorkout);
 
+    createOrganizationList();
+    setWeekLocalStorage();
+
+    // get display elements
+
+    let mainContainer = document.querySelector('#main-container');
+    let organizationList = document.querySelector('#week-organization');
+    let toggleButton = document.querySelector('#organization-list');
+    let addContainer = document.querySelector('#add-main-container');
+    
+    // hide all content
+    mainContainer.style.display = "none";
+    organizationList.style.display = 'block';
+    toggleButton.style.display = 'block';
+    addContainer.style.display = 'none';
 }

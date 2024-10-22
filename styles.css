@@ -107,7 +107,6 @@ button {
     }
 
     #details div, #add-details div {
-        flex-grow: 1;
         font-size: 2.3rem;
         text-align: center;
     }
