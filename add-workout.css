@@ -27,14 +27,17 @@ textarea {
 
 .add-workout-detail:nth-child(1) {
     width: 20%;
+    font-size: 1.8rem;
 }
 
 .add-workout-detail:nth-child(2) {
-    width: 40%;
+    width: 50%;
+    font-size: 1.8rem;
 }
 
 .add-workout-detail:nth-child(3) {
     width: 20%;
+    font-size: 1.8rem;
 }
 
     #add-reps input {
