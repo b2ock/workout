@@ -1,5 +1,6 @@
 #add-main-container {
     display: none;
+    overflow: scroll;
 }
 
 #add-workout-actions button {

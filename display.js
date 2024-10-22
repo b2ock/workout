@@ -81,6 +81,8 @@ function nextSet() {
     if (activeWorkout.currentSet == activeWorkout.sets) {
         week.selectedDay.changeWorkout(1);
         activeWorkout.currentSet = 0;
+        deactivateWorkout();
+        hideNextButton();
     } 
     else {
         activeWorkout.currentSet += 1;
@@ -304,4 +306,27 @@ function saveWorkout(day) {
     organizationList.style.display = 'block';
     toggleButton.style.display = 'block';
     addContainer.style.display = 'none';
+    cancelAdd();
+}
+
+function cancelAdd() {
+    let mainContainer = document.querySelector('#main-container');
+    let organizationList = document.querySelector('#week-organization');
+    let toggleButton = document.querySelector('#organization-list');
+    let addContainer = document.querySelector('#add-main-container');
+    
+    // hide all content
+    mainContainer.style.display = "none";
+    organizationList.style.display = 'block';
+    toggleButton.style.display = 'block';
+    addContainer.style.display = 'none';
+
+    document.querySelector('#add-workout-title').value = '';
+    document.querySelector('#add-equipment').value = '';
+    document.querySelector('#add-muscle-group').value = '';
+    document.querySelector('#add-description').value = '';
+    document.querySelector('#add-sets').value = '3';
+    document.querySelector('#add-reps-lower').value = '8';
+    document.querySelector('#add-reps-upper').value = '10';
+    document.querySelector('#add-weight').value = '';
 }
