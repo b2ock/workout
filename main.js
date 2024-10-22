@@ -19,7 +19,7 @@ function main() {
             }
         }
         week.selectedDay = week.days[today.getDay()]
-        localStorage.setItem('week', JSON.stringify(week));
+        setWeekLocalStorage();
     } 
 
     let savedWeek = JSON.parse(localStorage.getItem('week'));
@@ -37,4 +37,9 @@ function main() {
     
     display();
 }
+
+function setWeekLocalStorage() {
+    localStorage.setItem('week', JSON.stringify(week));
+}
+
 main();

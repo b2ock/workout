@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/8da063ca98.js" crossorigin="anonymous"></script>
     <link href="styles.css" rel="stylesheet">
     <link href="week-organization.css" rel="stylesheet">
+    <link href="add-workout.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="manifest" href="/workout/manifest.json">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +17,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-   
+
 <div id="main-container" class="container">
     <div id="section-one" class="container">
-        <div id="day" class="container">
-            <button id="left-touchbox" class="touchbox"></button>
-            <button id="right-touchbox" class="touchbox"></button>
-        </div>
+        <div id="day" class="container"></div>
         <div id="workout-title" class="container">
     
         </div>
@@ -60,28 +58,70 @@
     </div>
 </div>
 
-<!-- organization, add and remove workouts -->
+<!-- button to toggle between pages -->
 <button id="organization-list" onclick="toggleOrganizeWorkouts()"><i class="fa-solid fa-bars"></i></button>
 
-<div id="week-organization">
-    <div id="organization-template">
-        <div class="organization-day-template">
-            <div class="organization-day">Monday</div>
-            <div class="organization-day-workout">
-                <div class="organization-workout">
-                    <div class="workout-hamburger center-item"><i class="fa-solid fa-bars"></i></div>
-                    <div class="workout-title">workout title</div>
-                    <div class="workout-delete center-item"><i class="fa-solid fa-trash"></i></div>
-                </div>
-            </div>
-            <div class="organization-day-workout organization-add-workout">
-                <div class="organization-workout">
-                    <div class="workout-hamburger center-item"><i class="fa-solid fa-plus"></i></div>
-                    <div class="workout-title">add workout</div>
-                    <div class="workout-delete center-item"><i class="fa-solid"></i></div>
-                </div>
+<!-- the template for the workout organization list -->
+<div id="organization-template">
+    <div class="organization-day-template">
+        <div class="organization-day">Monday</div>
+        <div class="organization-day-workout">
+            <div class="organization-workout">
+                <div class="workout-hamburger center-item"><i class="fa-solid fa-bars"></i></div>
+                <div class="workout-title">workout title</div>
+                <div class="workout-delete center-item"><i class="fa-solid fa-trash"></i></div>
             </div>
         </div>
+        <div class="organization-day-workout organization-add-workout">
+            <div class="organization-workout">
+                <div class="workout-hamburger center-item"><i class="fa-solid fa-plus"></i></div>
+                <div class="workout-title">add workout</div>
+                <div class="workout-delete center-item"><i class="fa-solid"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- where the workouts in the organization list go -->
+<div id="week-organization">
+    
+</div>
+
+<!-- add workout stuff -->
+
+<div id="add-main-container" class="container">
+    <div id="add-section-one" class="container">
+        <div id="add-day" class="container">Placeholder</div>
+        <input id="add-workout-title" class="container" placeholder="Workout Title">
+        <div id="add-tags" class="container">
+            <input id="add-equipment" class="tag" placeholder="equipment">
+            <input id="add-muscle-group" class="tag" placeholder="muscle group">
+        </div>
+        <textarea id="add-description" class="container" placeholder="Description" type="text"></textarea>
+        <div id="add-weight-changes" class="container">
+        </div>
+    </div>
+    
+    <div id="add-workout-details" class="container">
+        <div id="add-workout-detail-titles" class="container">
+            <div id="add-sets-title">sets</div>
+            <div id="add-reps-title">reps</div>
+            <div id="add-weight-title">weight</div>
+        </div>
+        <div id="add-details" class="container">
+            <input id="add-sets" class="workout-detail" placeholder="3" value="3">
+            <div id="add-reps">
+                <input id="add-reps-lower" class="workout-detail" placeholder="8-10" value="8">
+                <span>-</span>
+                <input id="add-reps-upper" class="workout-detail" placeholder="8-10" value="8">
+            </div>
+            <input id="add-weight" class="workout-detail" placeholder="0">
+        </div>
+        
+    </div>
+    <div id="add-workout-actions" class="container">
+        <button id="save-workout" onclick="" class="workout-buttons">Save</button>
+        <button id="cancel-add-workout" class="workout-buttons" onclick="">Cancel</button>
     </div>
 </div>
 

@@ -13,8 +13,26 @@ function display() {
     // display the workout info
     day.innerText = week.selectedDay.name;
 
+
+    //***IF THE WORKOUTS ARRAY IS EMPTY FOR A DAY DISPLAY NO WORKOUTS***/
+    if (week.selectedDay.workouts.length == 0) {
+        week.selectedDay.selectedWorkout = {
+            "name": "No Workouts",
+            "equipment": null,
+            "muscleGroup": null,
+            "description": "Add a workout to the days workout list to see it here",
+            "sets": null,
+            "repsLower": null,
+            "repsUpper": null,
+            "weight": null,
+            "changeWeight": function() {console.log('no workout to add weight to')},
+        }
+    }
+
+
     // set active workout to the selectedDay's selectedWorkout
     let selectedWorkout = week.selectedDay.selectedWorkout;
+
     // set workout title
     workoutTitle.innerText = selectedWorkout.name;
     // set equipment
@@ -115,12 +133,12 @@ let touchEndX = 0;
 let touchY = 0;
 
 document.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-    touchY = e.changedTouches[0].screenY;
+    touchStartX = e.changedTouches[0].clientX;
+    touchY = e.changedTouches[0].clientY;
 });
 
 document.addEventListener('touchmove', (e) => {
-    touchEndX= e.changedTouches[0].screenX;
+    touchEndX= e.changedTouches[0].clientX;
 })
 
 document.addEventListener('touchend', () => {
@@ -162,7 +180,7 @@ document.addEventListener('touchend', () => {
     touchY = 0;
 });
 
-// organize workouts
+// organize workouts page
 
 function toggleOrganizeWorkouts() {
     let mainContainer = document.querySelector('#main-container');
@@ -176,6 +194,7 @@ function toggleOrganizeWorkouts() {
         organizationList.style.display = 'none';
         toggleButton.childNodes[0].classList.remove('fa-home');
         toggleButton.childNodes[0].classList.add('fa-bars');
+        display();
     }
     else {  
         mainContainer.style.display = 'none';
@@ -183,7 +202,6 @@ function toggleOrganizeWorkouts() {
         toggleButton.childNodes[0].classList.remove('fa-bars');
         toggleButton.childNodes[0].classList.add('fa-home');
     }
-    
 }
 
 function createOrganizationList() {
@@ -204,14 +222,61 @@ function createOrganizationList() {
 
         for (let workout of organizationDay.workouts) {
             let organizationWorkout = organizationWorkoutTemplate.cloneNode(true);
+            let organizationDelete = organizationWorkout.childNodes[1].childNodes[5];
             let workoutTitle = organizationWorkout.childNodes[1].childNodes[3];
+            organizationDelete.onclick = function() {
+                deleteWorkout(organizationDay, workout);
+            };
             workoutTitle.innerText = workout.name;
             day.appendChild(organizationWorkout);
         }
         
         let addWorkout = organizationWorkoutAdd.cloneNode(true);
+        addWorkout.onclick = function() {
+            addWorkoutToDay(organizationDay.name);
+        }
         day.appendChild(addWorkout);
 
         organizationWeek.appendChild(day);
     }
+}
+
+function deleteWorkout(day, workout) {
+    let newWorkouts = day.workouts.filter(removedWorkout => removedWorkout !== workout);
+    day.workouts = newWorkouts;
+    createOrganizationList();
+    setWeekLocalStorage();
+
+    // this works but there is a bug where if I delete all the workouts the delete button dissapears
+}
+
+function addWorkoutToDay(day) {
+    let mainContainer = document.querySelector('#main-container');
+    let organizationList = document.querySelector('#week-organization');
+    let toggleButton = document.querySelector('#organization-list');
+    let addContainer = document.querySelector('#add-main-container');
+    // hide all content
+    mainContainer.style.display = "none";
+    organizationList.style.display = 'none';
+    toggleButton.style.display = 'none';
+    addContainer.style.display = 'flex';
+
+    // get elements for adding workout
+
+    console.log(document.querySelector('#add-workout-title').value);
+    let workoutName = document.querySelector('#add-workout-title').value;
+    let workoutEquipment = document.querySelector('#add-equipment');
+    let workoutMuscleGroup = document.querySelector('#add-muscle-group');
+    let workoutDescription = document.querySelector('#add-description');
+    let workoutSets = document.querySelector('#add-details');
+    let workoutRepsLower = document.querySelector('#add-reps-lower');
+    let workoutRepsUpper = document.querySelector('#add-reps-upper');
+    let workoutWeight = document.querySelector('#add-weight');
+
+    let workoutDay = day;
+
+}
+
+function saveWorkout(workout) {
+
 }

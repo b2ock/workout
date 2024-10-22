@@ -1,0 +1,34 @@
+#add-main-container {
+    display: none;
+}
+
+#add-workout-actions button {
+    flex-grow: 1;
+}
+
+input {
+    border: none;
+    background: none;
+    width: 60px;
+    color: white;
+}
+
+textarea {
+    background: none;
+    font-family: "Inter";
+    color: white;
+}
+
+.workout-detail {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+#add-reps {
+    display: flex;
+    justify-content: space-between;
+}
+
+    #add-reps input {
+        width: 30px;
+    }
