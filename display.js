@@ -176,6 +176,7 @@ document.addEventListener('touchend', () => {
     let startButton = document.querySelector('#start-button');
     startButton.innerText = "Start";
     startButton.onclick = showNextButton;
+    deactivateWorkout();
 
     touchStartX = 0;
     touchEndX = 0;
